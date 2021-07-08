@@ -1,0 +1,225 @@
+{
+    "status": "exito",
+    "data": [
+        {
+            "id": 6062,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/promo_polla_movistar.mp4",
+            "titulo": "\u00a1Interact\u00faa con la Polla de la App y Movistar! \u00a1Encu\u00e9ntrala en nuestro Men\u00fa!",
+            "descripcion": null,
+            "fecha": "2021-07-07 17:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021061517003112.jpg",
+            "destacada": 1,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6132,
+            "link": null,
+            "titulo": "Fotos partido Colombia vs. Argentina",
+            "descripcion": null,
+            "fecha": "2021-07-06 19:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070621120349.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6131,
+            "link": null,
+            "titulo": "Hacemos el calentamiento en el Man\u00e9 Garrincha",
+            "descripcion": null,
+            "fecha": "2021-07-06 18:30:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070621043583.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6130,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/salidahotel.mp4",
+            "titulo": "Rumbo al Man\u00e9 Garrincha",
+            "descripcion": null,
+            "fecha": "2021-07-06 18:05:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070618330042.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6129,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/fcfpreviosemi.mp4",
+            "titulo": "\u00a1ES TIEMPO DE HACER HISTORIA!",
+            "descripcion": null,
+            "fecha": "2021-07-06 16:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070616511869.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6127,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/colsemis.mp4",
+            "titulo": "\u00a1Listos para la Semifinal!",
+            "descripcion": null,
+            "fecha": "2021-07-05 19:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070519055398.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6126,
+            "link": null,
+            "titulo": "\u00a1Entrenamiento antes de la Semifinal Vs Argentina",
+            "descripcion": null,
+            "fecha": "2021-07-05 18:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070519025266.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6128,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/videos\/prensa_5jul.mp4",
+            "titulo": "Rueda de prensa previo a la semifinal de la CONMEBOL Copa Am\u00e9rica",
+            "descripcion": null,
+            "fecha": "2021-07-05 14:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070519145469.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6125,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/ospina.mp4",
+            "titulo": "112 partidos de David Ospina",
+            "descripcion": null,
+            "fecha": "2021-07-05 09:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070516181169.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6123,
+            "link": null,
+            "titulo": "\u00a1A semis!",
+            "descripcion": null,
+            "fecha": "2021-07-03 23:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070323135947.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6124,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/videos\/4jul_prensa.mp4",
+            "titulo": "Rueda de Prensa post partido Vs Uruguay",
+            "descripcion": null,
+            "fecha": "2021-07-03 22:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070411372064.jpg",
+            "destacada": 1,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6122,
+            "link": null,
+            "titulo": "Fotos partido Colombia vs. Uruguay",
+            "descripcion": null,
+            "fecha": "2021-07-03 18:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070317313571.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6118,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/fcfvsuru.mp4",
+            "titulo": "Todos juntos a apoyar a la Tricolor",
+            "descripcion": null,
+            "fecha": "2021-07-03 17:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070315341982.jpg",
+            "destacada": 0,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6120,
+            "link": null,
+            "titulo": "Nuestro camerino en el Estadio Man\u00e9 Garrincha",
+            "descripcion": null,
+            "fecha": "2021-07-03 17:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070316523968.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6121,
+            "link": null,
+            "titulo": "Hacemos el calentamiento en el Man\u00e9 Garrincha",
+            "descripcion": null,
+            "fecha": "2021-07-03 17:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070316542914.jpg",
+            "destacada": 0,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6119,
+            "link": null,
+            "titulo": "Nuestro camerino en el Estadio Man\u00e9 Garrincha",
+            "descripcion": null,
+            "fecha": "2021-07-03 16:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070316291436.jpg",
+            "destacada": 1,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6116,
+            "link": null,
+            "titulo": "\u00a1\u00daltima pr\u00e1ctica antes de los Cuartos de Final contra Uruguay!",
+            "descripcion": null,
+            "fecha": "2021-07-02 18:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070218000625.jpg",
+            "destacada": 1,
+            "tipo": "Galeria",
+            "dorado": 0
+        },
+        {
+            "id": 6117,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/videos\/preparacion_cuartos.mp4",
+            "titulo": "\u00a1Afinando detalles!",
+            "descripcion": null,
+            "fecha": "2021-07-02 13:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070218374538.jpg",
+            "destacada": 1,
+            "tipo": "Video",
+            "dorado": 0
+        },
+        {
+            "id": 6114,
+            "link": null,
+            "titulo": "Comunicado Selecci\u00f3n Colombia: Matheus Uribe",
+            "descripcion": "El cuerpo t\u00e9cnico de la Selecci\u00f3n Colombia Masculina de Mayores, de acuerdo al informe del departamento m\u00e9dico, anuncia que el jugador Matheus Uribe sufri\u00f3 lesi\u00f3n grado II del m\u00fasculo psoleo de su pierna izquierda, la cual ya fue confirmada mediante im\u00e1genes diagn\u00f3sticas.\r\n\r\nPor tal raz\u00f3n, el futbolista no podr\u00e1 seguir compitiendo con el equipo en la CONMEBOL Copa Am\u00e9rica, y continuar\u00e1 su proceso de rehabilitaci\u00f3n seg\u00fan los lineamientos de su club F.C. Porto.",
+            "fecha": "2021-07-02 12:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070211315755.jpg",
+            "destacada": 0,
+            "tipo": "Normal",
+            "dorado": 0
+        },
+        {
+            "id": 6115,
+            "link": "https:\/\/cmsfcf.s3.amazonaws.com\/videos\/prensa_2juL.mp4",
+            "titulo": "Rueda de Prensa con el cuerpo t\u00e9cnico de la Selecci\u00f3n Colombia",
+            "descripcion": null,
+            "fecha": "2021-07-02 12:00:00",
+            "foto": "https:\/\/media.seleccioncolombiaoficial.com\/noticias\/2021070217543835.jpg",
+            "destacada": 1,
+            "tipo": "Video",
+            "dorado": 0
+        }
+    ]
+}

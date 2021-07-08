@@ -1,0 +1,188 @@
+Flutter contains Networking and JSON serialization modules. For the small JSON data, we still need to write much more boilerplate code as Dart does not support reflection.
+I hope you all are aware of Android/iOS, you may know a few libraries like Retrofit and Alamofire. We use network calls in almost every application they are now a crucial part of application functioning. These libraries take care of all the data parsing and that makes API calling a cakewalk.
+In this content, we are going to learn how to use the Retrofit library in Flutter.
+To call Rest API’s by sending dynamic headers, parameters, request & response in a custom and secured way “Retrofit” is the best way.
+Let’s get our hands dirty!! 🙌🏻 😄
+Step 1: Create a Flutter Application
+Step 2: we want to work with Retrofit implementation in flutter we need to add the below dependencies in pubspec.yaml file.
+dependencies:
+retrofit: ^1.3.4+1
+dio: ^3.0.10
+built_value: ^7.1.0
+json_annotation: ^3.1.0
+dev_dependencies:
+retrofit_generator: ^1.3.7+5
+build_runner: ^1.10.0
+json_serializable: ^3.5.0
+built_value_generator: ^7.1.0
+Dio is our Http client and handling the connection for us.
+Retrofit is a Dio Client that makes consuming Rest APIs easier for us.
+Build runner is used for code generation in Dart, apart from the pub.
+JSON Serialization creates a model class from JSON data.
+Step 3: To demonstrate API calling in this sample, we are going to use this public API: “https://gorest.co.in/public-api/users”
+Let’s create an abstract class ApiRequest & APIs
+///APIs class is for api tags
+class Apis {
+  static const String users = '/users';
+}
+@RestApi(baseUrl: "https://gorest.co.in/public-api/")
+abstract class ApiClient {
+  factory ApiClient(Dio dio, {String baseUrl}) = _ApiClient;
+
+  @GET(Apis.users)
+  Future<ResponseData> getUsers();
+}
+ApiClient class is working as a repository which will handle all the network call methods. In the above code, it will show an error on the _ApiClient variable, which will be resolved with steps we later in this post.
+Annotations on the method and URL parameter decide how the request will be handled. Every method must have HTTP annotation and relative parameters. There are some built-in annotations like GET, PUT, POST, PATCH, DELETE & HEADER. Add methods with annotations in ApiClient like above.
+Some examples with different annotations. May it will not match with the baseURL.
+//Dynamic headers
+@GET("/posts")
+Future<List<Post>> getPosts(@Header("Content-Type") String contentType );
+@GET("/comments")
+@Headers(<String, dynamic>{ //Static header
+  "Content-Type" : "application/json",
+  "Custom-Header" : "Your header"
+})
+Future<List<Comment>> getAllComments();
+@GET("/posts/{id}")
+Future<Post> getPostFromId(@Path("id") int postId);
+@GET("/comments?postId={id}")
+Future<Comment> getCommentFromPostId(@Path("id") int postId);
+@GET("/comments")
+Future<Comment> getCommentFromPostIdWithQuery(@Query("postId") int postId); //This yields to "/comments?postId=postId
+@DELETE("/posts/{id}")
+Future<void> deletePost(@Path("id") int postId);
+@POST("/posts")
+Future<Post> createPost(@Body() Post post);
+Method parameters:
+@Path- To update the URL dynamically replacement block surrounded by { } must be annotated with @Path using the same string.
+@Body- Sends dart object as the request body.
+@Query- used to append the URL.
+@Headers- to pass the headers dynamically.
+To solve the error we need to add the part ‘api_client.g.dart’; in the import statement. It will show you the warning “Missing “part ‘api_client.g.dart’;
+Run the command: flutter pub run build_runner build
+Part file allows you to split a file into multiple dart files.
+The above command will generate the api_client.g.dart file & contains all data about creating Retrofit instance and fetching data from the network.
+If you made any changes in ApiClient then also run the command to update part file or run commend flutter pub run build_runner watch it watches change in your project files and automatically builds the files whenever needed. It is safe to start watcher once and leaves running in the background.
+Step 4: Create Data Classes
+Our API will return a list of users. Adding a sample data of API
+{
+  code: 200,
+  meta: {
+    pagination: {
+      total: 1676,
+      pages: 84,
+      page: 1,
+      limit: 20
+    }
+  },
+  data: [
+    {
+      id: 1,
+      name: "Mrs. Somnath Namboothiri",
+      email: "somnath_namboothiri_mrs@baumbach-nitzsche.com",
+      gender: "Female",
+      status: "Active",
+      created_at: "2020–08–31T03:50:04.198+05:30",
+      updated_at: "2020–08–31T03:50:04.198+05:30"
+    },
+    
+  ]
+}
+Let’s create a data.dart and add the below code.
+There are two ways to parse JSON.
+I) Manual Serialization: We are getting a response from API in JSON format which we have to convert in dart class.
+class User {
+  int id;
+  String name;
+  String email;
+  String gender;
+  String status;
+  String created_at;
+  String updated_at;
+
+  User({this.id, this.name, this.email,this.gender, this.status, this.created_at, this.updated_at});
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      id: json['id'],
+      name: json['name'],
+      email: json['email'],
+      gender: json['gender'],
+      status: json['status'],
+      created_at: json['created_at'],
+      updated_at: json['updated_at'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+      'gender': gender,
+      'status': status,
+      'created_at': created_at,
+      'updated_at': updated_at,
+    };
+  }
+}
+II) Automatic Serialization: Retrofit automatically converts the “JSON” response to the “User” class in dart using User class from JSON.
+The below code will do auto serialization of the JSON data.
+At that time it will show errors. So let’s run the below command again and generate the part ‘data.g.dart’;
+Run the command: flutter pub run build_runner build
+import 'package:json_annotation/json_annotation.dart';
+part 'data.g.dart';
+
+@JsonSerializable()
+class User{
+  int id;
+  String name;
+  String email;
+  String gender;
+  String status;
+  String created_at;
+  String updated_at;
+
+  User({this.id, this.name, this.email,this.gender, this.status, this.created_at, this.updated_at});
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  Map<String, dynamic> toJson() => _$UserToJson(this);
+}
+
+@JsonSerializable()
+class ResponseData{
+  int code;
+  dynamic meta;
+  List<dynamic>data;
+  ResponseData({this.code, this.meta, this.data});
+  factory ResponseData.fromJson(Map<String, dynamic> json) => _$ResponseDataFromJson(json);
+  Map<String, dynamic> toJson() => _$ResponseDataToJson(this);
+
+}
+This serialization approach is better for medium to large projects as we don’t need handwritten boilerplate code. The downside of this approach is we need an initial setup, and also for each dart class, part file is created which might produce visual clutter in the project.
+Step 5: Let’s call the API with retrofit object
+FutureBuilder<ResponseData> _buildBody(BuildContext context) {
+  final client = ApiClient(Dio(BaseOptions(contentType: "application/json")));
+  return FutureBuilder<ResponseData>(
+    future: client.getUsers(),
+    builder: (context, snapshot) {
+      if (snapshot.connectionState == ConnectionState.done) {
+
+        final ResponseData posts = snapshot.data;
+        return _buildListView(context, posts);
+      } else {
+        return Center(
+          child: CircularProgressIndicator(),
+        );
+      }
+    },
+  );
+}
+Happy Coding !! 🙂
+I have created a Demo of using the above dependencies & steps in a flutter.
+You can find the source code of this post in the following Github repository: https://github.com/Mindinventory/flutter-retrofit
+There is a lot to explore with Flutter, following link to the official website has much useful stuff related to API calls, which is worth a look.
+https://flutter.dev/docs/development/data-and-backend/json
+I enjoyed a lot to build Listview using retrofit API call with Flutter as it allows you to call APIs write much less code. I will keep exploring the flutter framework and libraries,
+Please give some 👏 if you like what you read and follow us to stay updated with our latest posts.
